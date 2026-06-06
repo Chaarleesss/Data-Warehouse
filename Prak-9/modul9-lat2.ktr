@@ -437,13 +437,8 @@
   </notepads>
   <order>
     <hop>
-      <from>Select values</from>
-      <to>Sort rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows</from>
-      <to>Filter rows</to>
+      <from>CSV file input</from>
+      <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -452,8 +447,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>CSV file input</from>
-      <to>Select values</to>
+      <from>Select values</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>Filter rows</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -468,7 +468,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>C:\DWH-Tugas_Prak\Prak-9\Cabai Merah Keriting Oktober 2018 - Cabai Merah Keriting Oktober 2018.csv</filename>
+    <filename>C:/DWH-Tugas_Prak/Prak-9/data cabai keriting merah 2018 (jan ags).csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -878,8 +878,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>272</yloc>
+      <xloc>304</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1031,6 +1031,22 @@
                   <mask/>
                 </value>
               </condition>
+              <condition>
+                <negated>Y</negated>
+                <operator>AND</operator>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Grogol</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
             </conditions>
           </condition>
         </conditions>
@@ -1045,8 +1061,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>272</yloc>
+      <xloc>720</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1067,7 +1083,7 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:/DWH-Tugas_Prak/Prak-9/Cabai Merah Keriting Agustus 2018</name>
+      <name>C:/DWH-Tugas_Prak/Prak-9/September 2018</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -1148,8 +1164,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
-      <yloc>272</yloc>
+      <xloc>864</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1167,143 +1183,108 @@
     <fields>
       <field>
         <name>Pasar</name>
-        <rename/>
       </field>
       <field>
         <name>1</name>
-        <rename/>
       </field>
       <field>
         <name>2</name>
-        <rename/>
       </field>
       <field>
         <name>3</name>
-        <rename/>
       </field>
       <field>
         <name>4</name>
-        <rename/>
       </field>
       <field>
         <name>5</name>
-        <rename/>
       </field>
       <field>
         <name>6</name>
-        <rename/>
       </field>
       <field>
         <name>7</name>
-        <rename/>
       </field>
       <field>
         <name>8</name>
-        <rename/>
       </field>
       <field>
         <name>9</name>
-        <rename/>
       </field>
       <field>
         <name>10</name>
-        <rename/>
       </field>
       <field>
         <name>11</name>
-        <rename/>
       </field>
       <field>
         <name>12</name>
-        <rename/>
       </field>
       <field>
         <name>13</name>
-        <rename/>
       </field>
       <field>
         <name>14</name>
-        <rename/>
       </field>
       <field>
         <name>15</name>
-        <rename/>
       </field>
       <field>
         <name>16</name>
-        <rename/>
       </field>
       <field>
         <name>17</name>
-        <rename/>
       </field>
       <field>
         <name>18</name>
-        <rename/>
       </field>
       <field>
         <name>19</name>
-        <rename/>
       </field>
       <field>
         <name>20</name>
-        <rename/>
       </field>
       <field>
         <name>21</name>
-        <rename/>
       </field>
       <field>
         <name>22</name>
-        <rename/>
       </field>
       <field>
         <name>23</name>
-        <rename/>
       </field>
       <field>
         <name>24</name>
-        <rename/>
       </field>
       <field>
         <name>25</name>
-        <rename/>
       </field>
       <field>
         <name>26</name>
-        <rename/>
       </field>
       <field>
         <name>27</name>
-        <rename/>
       </field>
       <field>
         <name>28</name>
-        <rename/>
       </field>
       <field>
         <name>29</name>
-        <rename/>
       </field>
       <field>
         <name>30</name>
-        <rename/>
       </field>
       <field>
         <name>31</name>
-        <rename/>
       </field>
       <field>
         <name>Tertinggi</name>
-        <rename/>
       </field>
       <field>
         <name>Rata-Rata</name>
-        <rename/>
       </field>
       <field>
         <name>Terendah</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -1316,8 +1297,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>272</yloc>
+      <xloc>464</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1630,8 +1611,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>272</yloc>
+      <xloc>592</xloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

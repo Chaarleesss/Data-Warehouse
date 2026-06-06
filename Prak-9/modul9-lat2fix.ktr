@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Modul9-lat1</name>
+    <name>modul9-lat2fix</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>/</directory>
     <parameters>
     </parameters>
@@ -427,15 +428,20 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2026/05/21 15:17:58.483</created_date>
+    <created_date>2026/05/21 15:24:13.367</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2026/05/21 15:17:58.483</modified_date>
+    <modified_date>2026/05/21 15:24:13.367</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <order>
+    <hop>
+      <from>Select values</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
     <hop>
       <from>Sort rows</from>
       <to>Filter rows</to>
@@ -447,19 +453,14 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Microsoft Excel input</from>
+      <from>CSV file input</from>
       <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values</from>
-      <to>Sort rows</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Microsoft Excel input</name>
-    <type>ExcelInput</type>
+    <name>CSV file input</name>
+    <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -468,440 +469,407 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
+    <filename>C:/DWH-Tugas_Prak/Prak-9/Cabai Merah Keriting Desember 2018 - Cabai Merah Keriting Desember 2018.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>,</separator>
+    <enclosure>"</enclosure>
     <header>Y</header>
-    <noempty>Y</noempty>
-    <stoponempty>N</stoponempty>
-    <filefield/>
-    <sheetfield/>
-    <sheetrownumfield/>
-    <rownumfield/>
-    <sheetfield/>
-    <filefield/>
-    <limit>0</limit>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <format>mixed</format>
     <encoding/>
-    <add_to_result_filenames>Y</add_to_result_filenames>
-    <accept_filenames>N</accept_filenames>
-    <accept_field/>
-    <accept_stepname/>
-    <file>
-      <name>C:/DWH-Tugas_Prak/Prak-9/data cabai keriting merah 2018 (jan ags).xlsx</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
     <fields>
       <field>
-        <name>Pasar </name>
+        <name>Pasar</name>
         <type>String</type>
-        <length>-1</length>
+        <format/>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>26</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>1</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>2</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>3</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>4</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>5</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>6</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>7</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>8</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>9</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>10</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>11</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>12</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>13</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>14</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>15</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>16</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>17</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>18</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>19</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>20</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>21</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>22</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>23</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>24</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>25</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>26</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>27</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>28</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>29</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>30</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
       </field>
       <field>
         <name>31</name>
-        <type>Number</type>
-        <length>-1</length>
-        <precision>-1</precision>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
         <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
+      </field>
+      <field>
+        <name>Tertinggi</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Rata-Rata</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>Terendah</name>
+        <type>Integer</type>
+        <format>#</format>
+        <currency>IDR</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
       </field>
     </fields>
-    <sheets>
-      <sheet>
-        <name>agustus 2018</name>
-        <startrow>0</startrow>
-        <startcol>0</startcol>
-      </sheet>
-    </sheets>
-    <strict_types>N</strict_types>
-    <error_ignored>N</error_ignored>
-    <error_line_skipped>N</error_line_skipped>
-    <bad_line_files_destination_directory/>
-    <bad_line_files_extension>warning</bad_line_files_extension>
-    <error_line_files_destination_directory/>
-    <error_line_files_extension>error</error_line_files_extension>
-    <line_number_files_destination_directory/>
-    <line_number_files_extension>line</line_number_files_extension>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-    <spreadsheet_type>POI</spreadsheet_type>
-    <password>Encrypted </password>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -911,8 +879,191 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>240</xloc>
-      <yloc>256</yloc>
+      <xloc>208</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Microsoft Excel output</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <conditions>
+              <condition>
+                <negated>Y</negated>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Anyer Bahari</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+              <condition>
+                <negated>Y</negated>
+                <operator>AND</operator>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Gondangdia</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+              <condition>
+                <negated>Y</negated>
+                <operator>AND</operator>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Induk Kramat Jati</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+              <condition>
+                <negated>Y</negated>
+                <operator>AND</operator>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Kalibaru</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+              <condition>
+                <negated>Y</negated>
+                <operator>AND</operator>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Kalideres</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+              <condition>
+                <negated>Y</negated>
+                <operator>AND</operator>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Klender SS</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+              <condition>
+                <negated>Y</negated>
+                <operator>AND</operator>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Koja Baru</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+              <condition>
+                <negated>Y</negated>
+                <operator>AND</operator>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Rawamangun</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+              <condition>
+                <negated>Y</negated>
+                <operator>AND</operator>
+                <leftvalue>Pasar</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>Pasar Grogol</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+            </conditions>
+          </condition>
+        </conditions>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>624</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -933,7 +1084,7 @@
     <append>N</append>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>C:/DWH-Tugas_Prak/Prak-9/Agustus 2018</name>
+      <name>C:\DWH-Tugas_Prak\Prak-9\Desember 2018</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <create_parent_folder>N</create_parent_folder>
@@ -957,6 +1108,36 @@
       <filename>template.xls</filename>
     </template>
     <fields>
+      <field>
+        <name>Pasar</name>
+        <type>String</type>
+        <format/>
+      </field>
+      <field>
+        <name>1</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>2</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>3</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>4</name>
+        <type>Integer</type>
+        <format/>
+      </field>
+      <field>
+        <name>5</name>
+        <type>Integer</type>
+        <format/>
+      </field>
     </fields>
     <custom>
       <header_font_name>arial</header_font_name>
@@ -984,8 +1165,141 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>256</yloc>
+      <xloc>768</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>Pasar</name>
+      </field>
+      <field>
+        <name>1</name>
+      </field>
+      <field>
+        <name>2</name>
+      </field>
+      <field>
+        <name>3</name>
+      </field>
+      <field>
+        <name>4</name>
+      </field>
+      <field>
+        <name>5</name>
+      </field>
+      <field>
+        <name>6</name>
+      </field>
+      <field>
+        <name>7</name>
+      </field>
+      <field>
+        <name>8</name>
+      </field>
+      <field>
+        <name>9</name>
+      </field>
+      <field>
+        <name>10</name>
+      </field>
+      <field>
+        <name>11</name>
+      </field>
+      <field>
+        <name>12</name>
+      </field>
+      <field>
+        <name>13</name>
+      </field>
+      <field>
+        <name>14</name>
+      </field>
+      <field>
+        <name>15</name>
+      </field>
+      <field>
+        <name>16</name>
+      </field>
+      <field>
+        <name>17</name>
+      </field>
+      <field>
+        <name>18</name>
+      </field>
+      <field>
+        <name>19</name>
+      </field>
+      <field>
+        <name>20</name>
+      </field>
+      <field>
+        <name>21</name>
+      </field>
+      <field>
+        <name>22</name>
+      </field>
+      <field>
+        <name>23</name>
+      </field>
+      <field>
+        <name>24</name>
+      </field>
+      <field>
+        <name>25</name>
+      </field>
+      <field>
+        <name>26</name>
+      </field>
+      <field>
+        <name>27</name>
+      </field>
+      <field>
+        <name>28</name>
+      </field>
+      <field>
+        <name>29</name>
+      </field>
+      <field>
+        <name>30</name>
+      </field>
+      <field>
+        <name>31</name>
+      </field>
+      <field>
+        <name>Tertinggi</name>
+      </field>
+      <field>
+        <name>Rata-Rata</name>
+      </field>
+      <field>
+        <name>Terendah</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1009,11 +1323,11 @@
     <unique_rows>N</unique_rows>
     <fields>
       <field>
-        <name>Pasar </name>
+        <name>Pasar</name>
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1021,7 +1335,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1029,7 +1343,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1037,7 +1351,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1045,7 +1359,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1053,7 +1367,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1061,7 +1375,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1069,7 +1383,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1077,7 +1391,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1085,7 +1399,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1093,7 +1407,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1101,7 +1415,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1109,7 +1423,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1117,7 +1431,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1125,7 +1439,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1133,7 +1447,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1141,7 +1455,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1149,7 +1463,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1157,7 +1471,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1165,7 +1479,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1173,7 +1487,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1181,7 +1495,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1189,7 +1503,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1197,7 +1511,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1205,7 +1519,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1213,7 +1527,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1221,7 +1535,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1229,7 +1543,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1237,7 +1551,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1245,7 +1559,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1253,7 +1567,7 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
       <field>
@@ -1261,7 +1575,31 @@
         <ascending>Y</ascending>
         <case_sensitive>N</case_sensitive>
         <collator_enabled>N</collator_enabled>
-        <collator_strength>0</collator_strength>
+        <collator_strength>2</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Tertinggi</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>2</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Rata-Rata</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>2</collator_strength>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>Terendah</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>2</collator_strength>
         <presorted>N</presorted>
       </field>
     </fields>
@@ -1274,347 +1612,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Microsoft Excel output</send_true_to>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <conditions>
-              <condition>
-                <negated>Y</negated>
-                <leftvalue>Pasar </leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>Pasar Anyer Bahari</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-              <condition>
-                <negated>Y</negated>
-                <operator>AND</operator>
-                <leftvalue>Pasar </leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>Pasar Gondangdia</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-              <condition>
-                <negated>Y</negated>
-                <operator>AND</operator>
-                <leftvalue>Pasar </leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>Pasar Induk Kramat Jati</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-              <condition>
-                <negated>Y</negated>
-                <operator>AND</operator>
-                <leftvalue>Pasar </leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>Pasar Kalibaru</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-              <condition>
-                <negated>Y</negated>
-                <operator>AND</operator>
-                <leftvalue>Pasar </leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>Pasar Kalideres</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-              <condition>
-                <negated>Y</negated>
-                <operator>AND</operator>
-                <leftvalue>Pasar </leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>Pasar Klender SS</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-              <condition>
-                <negated>Y</negated>
-                <operator>AND</operator>
-                <leftvalue>Pasar </leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>Pasar Koja Baru</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-              <condition>
-                <negated>Y</negated>
-                <operator>AND</operator>
-                <leftvalue>Pasar </leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>Pasar Rawamangun</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-              <condition>
-                <negated>Y</negated>
-                <operator>AND</operator>
-                <leftvalue>Pasar </leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>Pasar Grogol</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-            </conditions>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>Pasar </name>
-        <rename/>
-      </field>
-      <field>
-        <name>1</name>
-        <rename/>
-      </field>
-      <field>
-        <name>2</name>
-        <rename/>
-      </field>
-      <field>
-        <name>3</name>
-        <rename/>
-      </field>
-      <field>
-        <name>4</name>
-        <rename/>
-      </field>
-      <field>
-        <name>5</name>
-        <rename/>
-      </field>
-      <field>
-        <name>6</name>
-        <rename/>
-      </field>
-      <field>
-        <name>7</name>
-        <rename/>
-      </field>
-      <field>
-        <name>8</name>
-        <rename/>
-      </field>
-      <field>
-        <name>9</name>
-        <rename/>
-      </field>
-      <field>
-        <name>10</name>
-        <rename/>
-      </field>
-      <field>
-        <name>11</name>
-        <rename/>
-      </field>
-      <field>
-        <name>12</name>
-        <rename/>
-      </field>
-      <field>
-        <name>13</name>
-        <rename/>
-      </field>
-      <field>
-        <name>14</name>
-        <rename/>
-      </field>
-      <field>
-        <name>15</name>
-        <rename/>
-      </field>
-      <field>
-        <name>16</name>
-        <rename/>
-      </field>
-      <field>
-        <name>17</name>
-        <rename/>
-      </field>
-      <field>
-        <name>18</name>
-        <rename/>
-      </field>
-      <field>
-        <name>19</name>
-        <rename/>
-      </field>
-      <field>
-        <name>20</name>
-        <rename/>
-      </field>
-      <field>
-        <name>21</name>
-        <rename/>
-      </field>
-      <field>
-        <name>22</name>
-        <rename/>
-      </field>
-      <field>
-        <name>23</name>
-        <rename/>
-      </field>
-      <field>
-        <name>24</name>
-        <rename/>
-      </field>
-      <field>
-        <name>25</name>
-        <rename/>
-      </field>
-      <field>
-        <name>26</name>
-        <rename/>
-      </field>
-      <field>
-        <name>27</name>
-        <rename/>
-      </field>
-      <field>
-        <name>28</name>
-        <rename/>
-      </field>
-      <field>
-        <name>29</name>
-        <rename/>
-      </field>
-      <field>
-        <name>30</name>
-        <rename/>
-      </field>
-      <field>
-        <name>31</name>
-        <rename/>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>400</xloc>
-      <yloc>256</yloc>
+      <xloc>496</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
