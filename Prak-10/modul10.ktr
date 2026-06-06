@@ -1184,108 +1184,143 @@
     <fields>
       <field>
         <name>Pasar</name>
+        <rename/>
       </field>
       <field>
         <name>1</name>
+        <rename/>
       </field>
       <field>
         <name>2</name>
+        <rename/>
       </field>
       <field>
         <name>3</name>
+        <rename/>
       </field>
       <field>
         <name>4</name>
+        <rename/>
       </field>
       <field>
         <name>5</name>
+        <rename/>
       </field>
       <field>
         <name>6</name>
+        <rename/>
       </field>
       <field>
         <name>7</name>
+        <rename/>
       </field>
       <field>
         <name>8</name>
+        <rename/>
       </field>
       <field>
         <name>9</name>
+        <rename/>
       </field>
       <field>
         <name>10</name>
+        <rename/>
       </field>
       <field>
         <name>11</name>
+        <rename/>
       </field>
       <field>
         <name>12</name>
+        <rename/>
       </field>
       <field>
         <name>13</name>
+        <rename/>
       </field>
       <field>
         <name>14</name>
+        <rename/>
       </field>
       <field>
         <name>15</name>
+        <rename/>
       </field>
       <field>
         <name>16</name>
+        <rename/>
       </field>
       <field>
         <name>17</name>
+        <rename/>
       </field>
       <field>
         <name>18</name>
+        <rename/>
       </field>
       <field>
         <name>19</name>
+        <rename/>
       </field>
       <field>
         <name>20</name>
+        <rename/>
       </field>
       <field>
         <name>21</name>
+        <rename/>
       </field>
       <field>
         <name>22</name>
+        <rename/>
       </field>
       <field>
         <name>23</name>
+        <rename/>
       </field>
       <field>
         <name>24</name>
+        <rename/>
       </field>
       <field>
         <name>25</name>
+        <rename/>
       </field>
       <field>
         <name>26</name>
+        <rename/>
       </field>
       <field>
         <name>27</name>
+        <rename/>
       </field>
       <field>
         <name>28</name>
+        <rename/>
       </field>
       <field>
         <name>29</name>
+        <rename/>
       </field>
       <field>
         <name>30</name>
+        <rename/>
       </field>
       <field>
         <name>31</name>
+        <rename/>
       </field>
       <field>
         <name>Tertinggi</name>
+        <rename/>
       </field>
       <field>
         <name>Rata-Rata</name>
+        <rename/>
       </field>
       <field>
         <name>Terendah</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
